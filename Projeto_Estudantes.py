@@ -29,7 +29,7 @@ Base_de_dados.rename ( columns ={'Unnamed: 0': 'Id',
 # Campos Nulos
 
 Nulos = Base_de_dados.isnull()
-
+plt.title("Campos Nulos")
 plt.figure(figsize=(16,8))
 plt.title("Analise  de Campos Nulos")
 sns.heatmap(Nulos,cbar=False)
@@ -39,10 +39,12 @@ plt.show()
 # Campos Únicos
 
 Unicos = Base_de_dados.nunique()
+plt.title("Campos Unicos")
 plt.figure(figsize=(15,8))
 plt.title("Analise de Campos Únicos")
 sns.barplot(Unicos)
 plt.show()
+
 #print(Base_de_dados.nunique())
 
 # Duplicados
@@ -72,33 +74,41 @@ print('\n')
 
 Base_de_dados['genero'] = Base_de_dados['genero'].replace({'male':'masculino','female':'feminino'})
 
+plt.title("Matemática/Gênero")
 sns.boxplot( data= Base_de_dados,x='matematica',y='genero', palette= {'masculino':'lightblue', 'feminino':'lightpink'})
 plt.show()
+plt.savefig("Matemática/Gênero")
 print('\n')
 
+plt.title("Escrita/Gênero")
 sns.boxplot( data= Base_de_dados,x='escrita',y='genero',hue='genero',palette= {'masculino':'lightblue', 'feminino':'lightpink'},legend=False)
 plt.show()
+plt.savefig("Escrita/Gênero")
 print('\n')
 
-
-sns.boxplot( data= Base_de_dados,x='escrita',y='genero',hue='genero',palette= {'masculino':'lightblue', 'feminino':'lightpink'},legend=False)
-plt.show()
-print('\n')
 
 print(Base_de_dados.groupby(by=['genero']).describe()['matematica'].reset_index(),'\n')
 
+plt.title("Raça/etnia em geral")
 sns.pairplot(Base_de_dados,hue='Raça/etnia')
 plt.show()
+plt.savefig("Raça/etnia em geral")
 print('\n')
 print(Base_de_dados.groupby(by=['Raça/etnia']).describe()['leitura'].reset_index())
 
+plt.title("Matemática/ Raça/etnia")
 sns.boxplot(data=Base_de_dados,x='matematica',y='Raça/etnia')
 plt.show()
+plt.savefig("Matemática/ Raça/etnia")
 
 
+plt.title("Matemática/educação dos pais")
 sns.boxplot(data= Base_de_dados,x='matematica',y='educação dos pais')
 plt.show()
+plt.savefig("Matemática/educação dos pais")
 print(Base_de_dados.groupby(by=['educação dos pais']).describe()['matematica'].reset_index())
 
+plt.title("Matemática / Leitura")
 sns.scatterplot(data= Base_de_dados,x= 'matematica',y= 'leitura')
 plt.show()
+plt.savefig("Matemática / Leitura")
