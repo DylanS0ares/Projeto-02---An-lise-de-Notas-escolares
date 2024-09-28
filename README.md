@@ -7,7 +7,7 @@ De todas as análise feitas durante o projeto , a mais significativa é a relaç
 
    ![Matematica_Educacao_Pais](https://github.com/user-attachments/assets/c6e3d465-48e0-40c8-aa5e-0e8c599b6c8e)
 
-alunos em que os pais possuem mestrado possuem a maior média , enquanto os que possuem apenas ensino médio a menor média, percebe-se também que apesar da menor média não possui outliers enquanto mesmo alunos com pais com alguma faculdade possuem outliers .
+alunos em que os pais possuem mestrado possuem a maior média , enquanto os que possuem apenas ensino médio a menor média, percebe-se também que apesar da menor média, esssa não possui outliers, enquanto mesmo alunos com pais com alguma faculdade possuem outliers .
 
 No gráfico seguinte, com a amostragem em relação a gênero, percebe-se que o feminino tende a ser melhor em escrita e leitura , enquanto o masculino tende a maior afinidade a àrea da matemática 
 
